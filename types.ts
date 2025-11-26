@@ -7,6 +7,11 @@ export interface Subscription {
   renewalDate: string;
 }
 
+export interface Category {
+  id: string;
+  name: string;
+}
+
 export interface AlternativeService {
   name: string;
   priceDescription: string;
@@ -32,5 +37,14 @@ export interface GuideState {
 export enum View {
   DASHBOARD = 'DASHBOARD',
   DEAL_FINDER = 'DEAL_FINDER',
-  ADD_SUB = 'ADD_SUB'
+  ADD_SUB = 'ADD_SUB',
+  PROFILE = 'PROFILE'
+}
+
+export type ToastType = 'success' | 'error' | 'info';
+
+export interface ToastMessage {
+  id: string;
+  message: string;
+  type: ToastType;
 }
